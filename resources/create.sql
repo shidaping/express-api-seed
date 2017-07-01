@@ -1,0 +1,22 @@
+#用户
+create table user(
+  id int not null primary key auto_increment,
+  user_name varchar(255) comment '用户名',
+  mobile varchar(100) comment '手机号',
+  email varchar(255) comment '邮箱',
+  user_type int default 1 comment '用户类型: 1 管理员; 2 普通编辑; 3 普通用户;',
+  password varchar(255) comment '密码',
+  salt varchar(255) comment '盐',
+  nickname varchar(255) comment '昵称',
+  true_name varchar(255) comment '真实姓名',
+  avatar varchar(255) comment '头像',
+  score int default 0 comment '积分',
+  level int default 0 comment '等级',
+  wechat_openid varchar(255) comment '微信openid',
+  created_by int default 0,
+  created_at datetime,
+  updated_by int default 0,
+  updated_at datetime,
+  unique key `email` (`email`),
+  unique key `mobile` (`mobile`),
+);

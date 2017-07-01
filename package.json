@@ -1,0 +1,52 @@
+{
+  "name": "webpack-isomorphic-seed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "deploy": "rm -rf dist && NODE_ENV=production webpack -p --progress",
+    "deploy-testing": "rm -rf dist && NODE_ENV=testing webpack -p --progress",
+    "build": "rm -rf assets && webpack -p --progress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shidaping/webpack-isomorphic-seed.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shidaping/webpack-isomorphic-seed/issues"
+  },
+  "homepage": "https://github.com/shidaping/webpack-isomorphic-seed#readme",
+  "dependencies": {
+    "async": "^2.5.0",
+    "babel": "^6.5.2",
+    "babel-core": "^6.17.0",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-transform-class-properties": "^6.9.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-1": "^6.5.0",
+    "babel-register": "^6.24.1",
+    "body-parser": "^1.17.2",
+    "connect-redis": "^3.3.0",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.0",
+    "express-session": "^1.15.3",
+    "ip": "^1.1.3",
+    "morgan": "^1.8.2",
+    "mysql": "^2.13.0",
+    "orm": "^3.2.3",
+    "redis": "^2.7.1",
+    "uuid": "^3.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^5.0.1",
+    "eslint-plugin-react": "^7.0.1"
+  }
+}
